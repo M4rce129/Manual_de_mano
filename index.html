@@ -1,138 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Mano</title>
-    <style>
-        body {
-            background-color: white;
-            font-style: italic;
-            font-size: 18px;
-            line-height: 1.5;
-            margin: 0;
-            padding: 20px;
-            position: relative;
-            max-width: 100%;
-            box-sizing: border-box;
-            min-height: 100vh;
-        }
-
-        html, body {
-            width: 100%;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            ul {
-                padding-left: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.35rem;
-            }
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Escudo_prepa_6_enp_6.jpg/330px-Escudo_prepa_6_enp_6.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            opacity: 0.3;
-            z-index: -1;
-        }
-
-        h1 {
-            text-align: center;
-        }
-        
-        .colaborador {
-            margin-bottom: 10px;
-        }
-        
-        .nombre {
-            display: block;
-            font-weight: bold;
-        }
-        
-        .aportacion {
-            display: block;
-            margin-left: 20px;
-            font-style: italic;
-            font-size: 0.95em;
-        }
-    </style>
+    <title>Número aleatorio</title>
 </head>
-
 <body>
-    <h1>Programa de Mano presentación de Teatro ENP6</h1>
-    <p>Las <strong>Aceitunas de Lope de Rueda</strong>, una comedia del Siglo de Oro español.</p>
 
-    <p>Nuestro elenco es: </p>
-    <ul>
-        <li><strong>Actores:</strong>
-            <ul>
-                <li class="colaborador">
-                    <span class="nombre">García Pedraza Sofía</span>
-                    <span class="aportacion">MENCIGÜELA, su hija.</span>
-                </li>
-                <li class="colaborador">
-                    <span class="nombre">Rocha Barrientos Eduardo</span>
-                    <span class="aportacion">TORUVIO, simple, viejo.</span>
-                </li>
-                <li class="colaborador">
-                    <span class="nombre">Sarahi Bautista Giron</span>
-                    <span class="aportacion">AGUEDA DE TORUÉGANO, su muger.</span>
-                </li>
-                <li class="colaborador">
-                    <span class="nombre">García Hernández Oscar</span>
-                    <span class="aportacion">ALOJA, vecino.</span>
-                </li>
-            </ul>
-        </li>
-        <li><strong>Producción:</strong>
-            <ul>
-                <li class="colaborador">
-                    <span class="nombre">Marcel Gilsoul Reyes</span>
-                    <span class="aportacion">Producción TEC.</span>
-                </li>
-                <li class="colaborador">
-                    <span class="nombre">Ramírez Lozada Matías Demian</span>
-                    <span class="aportacion">Staff.</span>
-                </li>
-                <li class="colaborador">
-                    <span class="nombre">Aguirre Saucedo Alejandro</span>
-                    <span class="aportacion">Vestuario.</span>
-                </li>
-                <li class="colaborador">
-                    <span class="nombre">Santana Vargas Gabriela y Soriano Solis Sofía</span>
-                    <span class="aportacion">Elaboración Troncos.</span>
-          </li>
-            </ul>
-        </li>
-    </ul>
+    <h1 id="numero"></h1>
+
+    <script>
+        const numero = Math.floor(Math.random() * 10) + 1;
+        document.getElementById("numero").textContent = numero;
+    </script>
+
 </body>
-
 </html>
